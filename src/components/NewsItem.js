@@ -6,13 +6,24 @@ export class NewsItem extends Component {
     this.state = {
     }
   }
+
   render() {
     let { title, description, imageUrl, newsUrl, author, date, source } = this.props;
     return (
+
       <div className="my-3">
         <div className="card">
-          <span className="position-absolute top-0
-    translate-middle badge rounded-pill bg-danger" style={{ left: '90%', zIndex: '1' }}>{source}</span>
+          <div style = {{
+            display: 'flex',
+            justifyContent: 'flex-end',
+            position: 'absolute',
+            right: '0'
+          }
+          }>
+
+          <span className="badge rounded-pill bg-danger">{source}
+          </span>
+          </div>
           <img src={!imageUrl ? "https://foxbaltimore.com/resources/media/0a270d88-1964-4c7a-a52e-8d4d5b95077c-large16x9_VHELOSHOCKTRAUMArender.transfer_frame_792.jpeg?1676009085175" : imageUrl} className="card-img-top" alt="..." />
           <div className="card-body">
             <h5 className="card-title">{title}</h5>
@@ -22,6 +33,7 @@ export class NewsItem extends Component {
           </div>
         </div>
       </div>
+      
     )
   }
 }
