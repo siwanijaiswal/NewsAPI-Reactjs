@@ -6,7 +6,6 @@ export class NewsItem extends Component {
     this.state = {
     }
   }
-
   render() {
     let { title, description, imageUrl, newsUrl, author, date, source } = this.props;
     return (
@@ -17,10 +16,10 @@ export class NewsItem extends Component {
             display: 'flex',
             justifyContent: 'flex-end',
             position: 'absolute',
-            right: '0'
+            right: '0',
+            
           }
           }>
-
           <span className="badge rounded-pill bg-danger">{source}
           </span>
           </div>
@@ -33,7 +32,6 @@ export class NewsItem extends Component {
           </div>
         </div>
       </div>
-      
     )
   }
 }
